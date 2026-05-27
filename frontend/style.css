@@ -1,0 +1,105 @@
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    background-color: #F3F4F6;
+    text-align: center;
+}
+
+body a{
+    text-decoration: none;
+    color: rgb(221, 130, 18);
+    transition: transform 3s ease;
+}
+
+nav{
+    background-color: #1E293B;
+    padding: 20px;
+    text-align: end;
+}
+
+nav a{
+    font-size: larger;
+    color: #fff;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: yellow;
+}
+
+.form{
+    justify-items: center;
+}
+
+form{
+    text-align: left;
+    width: 350px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+input{
+    border: 1px solid hsl(0, 55%, 91%);
+    margin: 10px 0px;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+
+button{
+    border: 0px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #3B82F6;
+    color: #fff;
+}
+
+.table{
+    width: 100%;
+    justify-items: center;
+}
+
+table{
+    width: 500px;
+    border-collapse: collapse;
+
+}
+
+table{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db6b;
+    background-color: #fff;
+}
+td, th {
+    padding: 10px;
+}
+
+tr a{
+    color: #3B82F6;
+    margin: 0px 5px;
+}
+
+tr:first-child{
+    background-color: #d6d6d6;
+}
+
+tr:nth-child(even){
+    background-color: #d6d6d6;
+}
+
+tr:nth-child(odd){
+    background-color: #FFFFFF;
+}
+
+tr:hover {
+    background-color: #E2E8F0; 
+}
