@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Students</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
-<body>
+<body onload="getStudents()">
     <nav>
         <a href="dashboard.html">Dashboard</a>
         <a href="addstudent.html">Add Student</a>
@@ -29,60 +30,11 @@
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>shiva</td>
-                    <td>105</td>
-                    <td>9.06</td>
-                    <td>CSE</td>
-                    <td>
-                        <a href="edit.html">Edit</a>
-                        <a href="">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>warner</td>
-                    <td>37</td>
-                    <td>10</td>
-                    <td>EEE</td>
-                    <td>
-                        <a href="edit.html">Edit</a>
-                        <a href="">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Abhi</td>
-                    <td>42</td>
-                    <td>8.5</td>
-                    <td>ECE</td>
-                    <td>
-                        <a href="edit.html">Edit</a>
-                        <a href="">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Nitish</td>
-                    <td>40</td>
-                    <td>9.5</td>
-                    <td>Civil</td>
-                    <td>
-                        <a href="edit.html">Edit</a>
-                        <a href="">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Klass</td>
-                    <td>45</td>
-                    <td>10.0</td>
-                    <td>CSE</td>
-                    <td>
-                        <a href="edit.html">Edit</a>
-                        <a href="">Delete</a>
-                    </td>
-                </tr>
-            </tbody>
+            <tbody id="table"></tbody>
         </table>
     </div>
+
+
 </body>
 
 </html>

@@ -18,28 +18,30 @@
     <br>
 
     <div class="form">
-        <form action="viewstudents.html">
+        <form onsubmit="addStudent(event)">
             <h3>Add a new Student</h3>
 
             <label for="name">Name:</label>
-            <input type="text" name="name" placeholder="Enter student name" required>
+            <input type="text" name="name" id="name" placeholder="Enter student name" required>
             <br>
 
             <label for="id">ID:</label>
-            <input type="text" name="id" placeholder="Enter student ID" required>
+            <input type="text" name="id" id="id" placeholder="Enter student ID" required>
             <br>
 
             <label for="cgpa">CGPA:</label>
-            <input type="text" name="cgpa" placeholder="Enter student CGPA" required>
+            <input type="text" name="cgpa" id="cgpa" placeholder="Enter student CGPA" required>
             <br>
 
             <label for="branch">Branch:</label>
-            <input type="text" name="branch" placeholder="Enter student branch" required>
+            <input type="text" name="branch" id="branch" placeholder="Enter student branch" required>
             <br>
 
             <button type="submit">Add Student</button>
         </form>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
