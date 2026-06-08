@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="style.css">
+    <script src="logreg.js"></script>
 </head>
 <body>
     <nav>
@@ -14,12 +15,13 @@
     </nav>
     <br>
     <div class="form">
-        <form action="dashboard.html">
+        <form onsubmit="login(event)">
             <h3>Login here</h3>
             <label for="name">User Name:</label>
             <input
                 type="text"
                 name="name"
+                id="uname"
                 placeholder="Enter User Name"
                 required
             >
@@ -28,6 +30,7 @@
             <input
                 type="password"
                 name="password"
+                id="pass"
                 placeholder="Enter Password"
                 required
             >

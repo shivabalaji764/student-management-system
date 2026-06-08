@@ -142,9 +142,3 @@ function edit(event){
         window.location.href = "viewstudents.html";
     }
 }
-
-
-
-function logout(){
-    localStorage.clear();
-}

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="logreg.js"></script>
+
 </head>
 
 <body>
@@ -16,23 +19,23 @@
     </nav>
     <br>
     <div class="form">
-        <form action="login.html">
+        <form onsubmit="register(event)">
             <h3>Register here</h3>
 
             <label for="name">User Name</label>
-            <input type="text" name="name" placeholder="Enter User Name" required>
+            <input type="text" name="name" id="name" placeholder="Enter User Name" required>
             <br>
 
             <label for="password">Password:</label>
-            <input type="password" name="password" placeholder="Enter Password" required>
+            <input type="password" name="password" id="password" placeholder="Enter Password" required>
             <br>
 
             <label for="cpassword">Confirm Password:</label>
-            <input type="password" name="cpassword" placeholder="confirm Password" required>
+            <input type="password" name="cpassword" id="cpassword" placeholder="confirm Password" required>
             <br>
 
             <label for="mail">Email:</label>
-            <input type="email" name="mail" placeholder="Enter Email" required>
+            <input type="email" name="mail" id="mail" placeholder="Enter Email" required>
             <br>
 
             <button type="submit">Register</button>
