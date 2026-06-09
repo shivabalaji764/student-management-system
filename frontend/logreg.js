@@ -1,3 +1,6 @@
+const unameregex = /^[A-Za-z0-9_.]{5,}$/;
+const passwordregex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*\d).{8,}$/;
+
 function register(event){
     event.preventDefault();
 
@@ -7,6 +10,18 @@ function register(event){
     let password = document.getElementById("password").value;
     let cpassword = document.getElementById("cpassword").value;
     let mail = document.getElementById("mail").value;
+
+    if(!unameregex.test(name)){
+        window.alert("user name must contain atlest 5 characters \nand only alphabets, numbers , _ and .");
+        event.target.reset();
+        return;
+    }
+    
+    if(!passwordregex.test(password)){
+        window.alert("Password must contain \nAn uppercase alphabet \nA lowercase alphabet \nA special character \nA number \n8 Characters long");
+        event.target.reset();
+        return;
+    }
 
     if(password!==cpassword){
         console.log(password+" "+cpassword);
