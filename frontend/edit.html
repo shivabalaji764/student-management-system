@@ -10,7 +10,7 @@
     <script src="script.js"></script>
 </head>
 
-<body onload="load()" on>
+<body onload="load()">
     <nav>
         <a href="dashboard.html">Dashboard</a>
         <a href="addstudent.html">Add Student</a>
@@ -25,10 +25,7 @@
 
             <label for="name">Name:</label>
             <input type="text" name="name" id="editname" placeholder="Enter student name" required>
-            <br>
-
-            <label for="id">ID:</label>
-            <input type="text" name="id" id="editid" placeholder="Enter student ID" required>
+            <input type="text" name="id" id="editid" placeholder="Enter student ID" required hidden>
             <br>
 
             <label for="cgpa">CGPA:</label>
