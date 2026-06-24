@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/students")
 @CrossOrigin(
-        origins = "http://127.0.0.1:5500",
+        origins = "http://localhost:5173",
         allowCredentials = "true"
 )
 public class StudentController {
@@ -41,7 +41,7 @@ public class StudentController {
         );
     }
 
-    @PostMapping("/save")
+    @PatchMapping("/save")
     public ResponseEntity<String> update(@RequestBody StudentModel student){
         studentService.save(student);
         return ResponseEntity.ok("Saved successfully");
