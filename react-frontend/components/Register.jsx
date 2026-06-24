@@ -13,22 +13,25 @@ export default function Register(){
     const handleRegister = async (event)=>{
         event.preventDefault();
 
-        const response = await axios.post('http://localhost:1314/users/signup',
+        try{
+            await axios.post('http://localhost:1314/users/signup',
             {userName, password, email});
-
-        if(response.status===200){
             navigate("/login");
-        }else{
-            alert("something went wrong");
+        }catch(error){
+            if(error.status===409){
+                alert("username is already taken");
+            }else{
+                alert("Something went wrong");
+            }
         }
     }
 
     return(
         <>
             <nav>
-                <a onClick={e=>navigate("/")}>Home</a>
-                <a onClick={e=>navigate("/login")}>Login</a>
-                <a onClick={e=>navigate("/register")}>Register</a>
+                <a onClick={()=>navigate("/")}>Home</a>
+                <a onClick={()=>navigate("/login")}>Login</a>
+                <a onClick={()=>navigate("/register")}>Register</a>
             </nav>
             <br/>
             <div className="form">
@@ -64,7 +67,7 @@ export default function Register(){
                     <br/>
 
                     <button type="submit">Register</button>
-                    <p> already had an account? <a onClick={e=>navigate("/login")}>Login</a> here</p>
+                    <p> already had an account? <a onClick={()=>navigate("/login")}>Login</a> here</p>
                 </form>
             </div>
         </>

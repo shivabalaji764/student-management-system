@@ -30,11 +30,10 @@ export default function Edit(){
             name, studentId, cgpa, branch
         };
 
-        const response = await axios.patch("http://localhost:1314/students/save", student);
-
-        if(response.status===200){
+        try{
+            await axios.patch("http://localhost:1314/students/save", student);
             navigate('/view');
-        }else{
+        }catch(error){
             alert("something went wrong");
         }
     }
@@ -42,10 +41,10 @@ export default function Edit(){
     return(
         <>
             <nav>
-                <a onClick={e=>navigate("/dashboard")}>Dashboard</a>
-                <a onClick={e=>navigate("/add")}>Add Student</a>
-                <a onClick={e=>navigate("/view")}> View Students</a>
-                <a onClick={e=>navigate("/logout")}>Logout</a>
+                <a onClick={()=>navigate("/dashboard")}>Dashboard</a>
+                <a onClick={()=>navigate("/add")}>Add Student</a>
+                <a onClick={()=>navigate("/view")}> View Students</a>
+                <a onClick={()=>navigate("/logout")}>Logout</a>
             </nav>
             <br/>
 

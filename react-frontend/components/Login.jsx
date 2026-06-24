@@ -9,24 +9,30 @@ export default function Login(){
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
 
-    const login = async function (event){
+    const login = async function (event) {
         event.preventDefault();
-
-        const response = await axios.post("http://localhost:1314/users/login", {userName:name, password:password});
-
-        if(response.status===200){
+        try {
+            await axios.post("http://localhost:1314/users/login", {
+                userName: name,
+                password: password
+            });
             navigate('/dashboard');
-        }else{
-            alert("login failed");
+        } catch (error) {
+            if (error.status === 403) {
+                alert("Invalid Credentials");
+            } else {
+                alert("Something went wrong");
+            }
         }
+        event.target.reset();
     }
 
     return(
         <>
             <nav>
-                <a onClick={e=>navigate("/")}>Home</a>
-                <a onClick={e=>navigate("/login")}>Login</a>
-                <a onClick={e=>navigate("/register")}>Register</a>
+                <a onClick={()=>navigate("/")}>Home</a>
+                <a onClick={()=>navigate("/login")}>Login</a>
+                <a onClick={()=>navigate("/register")}>Register</a>
             </nav>
             <br/>
             <div className="form">

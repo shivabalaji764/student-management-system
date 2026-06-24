@@ -7,14 +7,14 @@ export default function Index(){
     return(
         <>
             <nav>
-                <a onClick={e=>navigate("/")}>Home</a>
-                <a onClick={e=>navigate("/login")}>Login</a>
-                <a onClick={e=>navigate("/register")}>Register</a>
+                <a onClick={()=>navigate("/")}>Home</a>
+                <a onClick={()=>navigate("/login")}>Login</a>
+                <a onClick={()=>navigate("/register")}>Register</a>
             </nav>
 
             <h2>Welcome to the Student management System</h2>
-            <h4><a onClick={e=>navigate("/login")}>Login</a> or
-                <a onClick={e=>navigate("/register")}>Register</a> to get started</h4>
+            <h4><a onClick={()=>navigate("/login")}>Login</a> or
+                <a onClick={()=>navigate("/register")}>Register</a> to get started</h4>
         </>
     )
 }

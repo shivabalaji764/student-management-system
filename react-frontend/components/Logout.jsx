@@ -7,7 +7,7 @@ export default function Logout(){
     return(
         <>
             <h2>You've successfully logged out</h2>
-            <h4><a onClick={e=>navigate("/login")}>click here</a> to login again</h4>
+            <h4><a onClick={()=>navigate("/login")}>click here</a> to login again</h4>
         </>
     );
 }

@@ -12,13 +12,11 @@ export default function Add(){
 
     const handleAdd = async function(event){
         event.preventDefault();
-
-        const response = await axios.post("http://localhost:1314/students/add",
-            {studentId, name, cgpa, branch});
-
-        if(response.status===200){
+        try {
+            await axios.post("http://localhost:1314/students/add",
+                {studentId, name, cgpa, branch});
             navigate('/view');
-        }else{
+        }catch(error){
             alert("Something went wrong");
         }
     }
@@ -26,10 +24,10 @@ export default function Add(){
     return(
         <>
             <nav>
-                <a onClick={e=>navigate("/dashboard")}>Dashboard</a>
-                <a onClick={e=>navigate("/add")}>Add Student</a>
-                <a onClick={e=>navigate("/view")}> View Students</a>
-                <a onClick={e=>navigate("/logout")}>Logout</a>
+                <a onClick={()=>navigate("/dashboard")}>Dashboard</a>
+                <a onClick={()=>navigate("/add")}>Add Student</a>
+                <a onClick={()=>navigate("/view")}> View Students</a>
+                <a onClick={()=>navigate("/logout")}>Logout</a>
             </nav>
             <br/>
 

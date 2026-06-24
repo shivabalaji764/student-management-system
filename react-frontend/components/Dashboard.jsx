@@ -6,10 +6,10 @@ export default function Dashboard(){
     return(
         <>
             <nav>
-                <a onClick={e=>navigate("/dashboard")}>Dashboard</a>
-                <a onClick={e=>navigate("/add")}>Add Student</a>
-                <a onClick={e=>navigate("/view")}> View Students</a>
-                <a onClick={e=>navigate("/logout")}>Logout</a>
+                <a onClick={()=>navigate("/dashboard")}>Dashboard</a>
+                <a onClick={()=>navigate("/add")}>Add Student</a>
+                <a onClick={()=>navigate("/view")}> View Students</a>
+                <a onClick={()=>navigate("/logout")}>Logout</a>
             </nav>
             <br/>
             <h2>Welcome to Student Management System Dashboard</h2>
