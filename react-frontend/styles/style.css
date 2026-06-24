@@ -44,16 +44,16 @@ form{
 
 input{
     border: 1px solid hsl(0, 55%, 91%);
-    margin: 10px 0px;
+    margin: 10px 0;
     height: 50px;
     width: 100%;
     box-sizing: border-box;
     border-radius: 10px;
-    padding: 0px 10px;
+    padding: 0 10px;
 }
 
 button{
-    border: 0px;
+    border: 0;
     margin-top: 10px;
     width: 100%;
     box-sizing: border-box;
@@ -86,7 +86,7 @@ td, th {
 
 tr a{
     color: #3B82F6;
-    margin: 0px 5px;
+    margin: 0 5px;
 }
 
 tr:first-child{
@@ -103,4 +103,27 @@ tr:nth-child(odd){
 
 tr:hover {
     background-color: #E2E8F0; 
+}
+
+.sort{
+    display: flex;
+}
+div button{
+    margin-left: 10px;
+    height: 35px;
+    width: 100px;
+}
+
+.search{
+    display: flex;
+}
+
+.search label{
+    align-content: center;
+    margin-right: 20px;
+}
+
+.search input{
+    height: 40px;
+    width: 200px;
 }
